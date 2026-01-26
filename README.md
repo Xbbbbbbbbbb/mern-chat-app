@@ -1,5 +1,6 @@
 # 💬 Real-Time Chat App (MERN + Socket.io)
-A full-stack real-time chat platform powered by the MERN stack and WebSocket technology, delivering instant, reliable communication with seamless user presence awareness. Featuring secure JWT-based authentication and a reactive UI built with Tailwind CSS, the app supports smooth one-on-one messaging, dynamic online/offline tracking, and a fully synchronized chat experience—ideal for modern social or collaborative environments.
+
+A full-stack real-time chat platform powered by the MERN stack and WebSocket technology, delivering instant, reliable communication with seamless user presence awareness. Featuring secure JWT-based authentication and reactive UI built with Tailwind CSS, the app supports smooth one-on-one messaging, dynamic online/offline tracking, and fully synchronized chat experience—ideal for modern social or collaborative environments.
 
 ## 🔍 Key Features
 
@@ -9,7 +10,7 @@ A full-stack real-time chat platform powered by the MERN stack and WebSocket tec
 
 - **🔐 JWT-Based Authentication**
 
-  Secure authentication system with JSON Web Tokens (JWT), featuring token validation middleware, route protection, and user session persistence across refreshes. Uses cookies over localStorage for better security, and keeps the client state in sync for a seamless, refresh-resistant login experience.
+  Secure authentication system with JSON Web Tokens (JWT), featuring token validation middleware, route protection, and user session persistence across refreshes. Uses cookies over localStorage for better security, and keeps client state in sync for seamless, refresh-resistant login experience.
 
 - **⚡ Real-Time Messaging with Socket.io**
   
@@ -37,34 +38,97 @@ mern-chat-app/
 │   ├── utils/                       # Utility functions
 │   └── server.js                    # Entry point for the backend server
 │
-├── frontend/                        # Frontend - React + Zustand + Socket.io client
-│   ├── public/                      # Static assets and index.html
-│   ├── src/
-│   │   ├── components/              # Reusable UI components (sidebar, message containers, etc.)
-│   │   ├── pages/                   # Pages (Login, Register, Chat, etc.)
-│   │   ├── context/                 # React context for global state
-│   │   ├── hooks/                   # Custom React hooks
-│   │   ├── zustand/                 # Zustand store setup
-│   │   ├── utils/                   # Utility helpers
-│   │   ├── lib/                     # Shared utility functions
-│   │   ├── App.jsx                  # Main app component
-│   │   └── main.jsx                 # App entry point
-│   └── package.json                 # Frontend dependencies and scripts
+├── src/                             # Frontend - React + Zustand + Socket.io client
+│   ├── components/                  # Reusable UI components (sidebar, message containers, etc.)
+│   ├── pages/                       # Pages (Login, Register, Chat, etc.)
+│   ├── context/                     # React context for global state
+│   ├── hooks/                       # Custom React hooks
+│   ├── zustand/                     # Zustand store setup
+│   ├── utils/                       # Utility helpers
+│   ├── assets/                      # Static assets
+│   ├── App.jsx                      # Main app component
+│   └── main.jsx                     # App entry point
 │
-├── .env                             # Environment variables for both client/server
+├── package.json                     # Frontend dependencies and scripts
+├── .env                             # Environment variables
 ├── .gitignore                       # Files/folders to be ignored by Git
 └── README.md                        # Project overview and documentation
 ```
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
 - **Backend**: `Node.js`, `Express.js`, `MongoDB`, `Mongoose`
+
 - **Frontend**: `React`, `React Router`
-- **UI & Visualization**: `Tailwind CSS`, `Daisy UI`, `react-hot-toast`
-- **WebSocket**: `Socket.io` (real-time messaging and online status)
-- **State Management**: `Zustand` (global state management)
-- **Authentication**: `JWT` (secure session handling), `bcrypt` (password hashing)
+
+- **UI & Styling**: `Tailwind CSS`, `DaisyUI`, `react-hot-toast`
+
+- **WebSocket**: `Socket.io`
+
+- **State Management**: `Zustand`
+
+- **Authentication**: `JWT`, `bcrypt`
+
+## ⚙️ Dependencies
+
+- **Node.js** — Required for backend and frontend
+   👉 [Download Node.js](https://nodejs.org/en/download)
+
+- **MongoDB** — Database for storing users and messages
+   👉 [Download MongoDB](https://www.mongodb.com/try/download/community)
+
+## 🚀 Setup & Usage
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/HenryyyLI/mern-chat-app.git
+   cd mern-chat-app
+   ```
+
+2. **Configure environment variables**
+
+   ```bash
+   # Create .env file in root directory with:
+   MONGODB_URI=mongodb://localhost:27017/chat-app
+   JWT_SECRET=your_jwt_secret_key
+   PORT=5000
+   NODE_ENV=development
+   ```
+
+3. **Install dependencies**
+
+   ```bash
+   # Install backend dependencies
+   cd backend
+   npm install
+   
+   # Install frontend dependencies
+   cd ..
+   npm install
+   ```
+
+4. **Start the application**
+
+   ```bash
+   # Start backend server (from backend directory)
+   cd backend
+   npm start
+   
+   # Start frontend dev server (from root directory, in new terminal)
+   npm run dev
+   ```
 
 ## 🌐 Deployment
 
 👉 **Live Demo**: https://chat-app-prod-xvv5.onrender.com
+
+## 📧 Contact
+
+Henry Li - [GitHub Profile](https://github.com/HenryyyLI)
+
+Project Link: [https://github.com/HenryyyLI/mern-chat-app](https://github.com/HenryyyLI/mern-chat-app)
+
+---
+
+⭐ If you find this project useful, please consider giving it a star!
